@@ -11,7 +11,7 @@ permissions: {}
 
 jobs:
   echo-test:
-    runs-on: self-hosted
+    runs-on: openci-runner-beta
     
     steps:
     - name: Echo message
