@@ -33,6 +33,23 @@ Open CI（GitHub Actions self-hosted runner）の動作検証用リポジトリ
    - システム情報の表示のみ
    - ランナーの基本動作確認用
 
+## 使い方
+
+詳細な使用方法については、[USAGE.md](./USAGE.md) を参照してください。
+
+### クイックスタート
+
+```bash
+# 依存関係のインストール
+pip install -r requirements.txt
+
+# テストの実行
+pytest -v test_app.py
+
+# アプリケーションの実行
+python app.py
+```
+
 ## セットアップ
 
 ### ローカルでの実行
