@@ -1,0 +1,30 @@
+name: Simple Echo Test
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  echo-test:
+    runs-on: openci-runner-beta
+    
+    steps:
+    - name: Echo message
+      run: echo "Hello from Open CI self-hosted runner!"
+    
+    - name: Display system info
+      run: |
+        echo "Runner OS: $RUNNER_OS"
+        echo "Runner name: $RUNNER_NAME"
+        uname -a
+    
+    - name: Check environment
+      run: |
+        echo "Current directory: $(pwd)"
+        echo "User: $(whoami)"
+        echo "Date: $(date)"
