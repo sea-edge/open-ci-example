@@ -16,7 +16,7 @@ Open CI（GitHub Actions self-hosted runner）の動作検証用リポジトリ
 
 ### GitHub Actions ワークフロー
 
-このリポジトリには3つのワークフローが含まれています：
+このリポジトリには4つのワークフローが含まれています：
 
 1. **Basic CI** (`.github/workflows/basic-ci.yml`)
    - 基本的なCI/CDパイプライン
@@ -32,6 +32,11 @@ Open CI（GitHub Actions self-hosted runner）の動作検証用リポジトリ
    - 最もシンプルなワークフロー
    - システム情報の表示のみ
    - ランナーの基本動作確認用
+
+4. **Copilot Coding Agent Demo** (`.github/workflows/copilot-coding-agent.yml`)
+   - GitHub Copilot Coding AgentをOpen CIで実行
+   - `copilot` ラベルが付いたissueやコメント、または手動実行でトリガー
+   - self-hosted runnerでのCopilot Coding Agentの動作確認
 
 ## 使い方
 
@@ -91,6 +96,7 @@ python app.py
 - ✅ マトリックスビルド
 - ✅ 並列ジョブの実行
 - ✅ システム情報の取得
+- ✅ GitHub Copilot Coding AgentのOpen CI対応
 
 ## ライセンス
 
