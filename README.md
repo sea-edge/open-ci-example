@@ -12,16 +12,12 @@ Open CI（GitHub Actions self-hosted runner）の動作検証用リポジトリ
 
 - `app.py` - 簡単な計算機アプリケーション（加算、減算、乗算、除算）
 - `test_app.py` - アプリケーションのテストコード
-- `requirements.txt` - Python依存関係（従来の方法）
 - `pyproject.toml` - プロジェクト設定とuv依存関係管理
 - `uv.lock` - uvによるロックファイル（依存関係の正確なバージョン）
 
 ### パッケージマネージャー
 
 このプロジェクトは[uv](https://docs.astral.sh/uv/)を使用した依存関係管理をサポートしています。uvは高速なPythonパッケージインストーラーおよびリゾルバーで、従来のpipよりも大幅に高速です。
-
-- uvを使用する場合: `uv sync` でインストール、`uv run` でコマンド実行
-- 従来のpipも引き続き利用可能
 
 ### GitHub Actions ワークフロー
 
@@ -53,8 +49,6 @@ Open CI（GitHub Actions self-hosted runner）の動作検証用リポジトリ
 
 ### クイックスタート
 
-#### uvを使用する場合（推奨）
-
 ```bash
 # uvのインストール
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -69,27 +63,12 @@ uv run pytest -v test_app.py
 
 # アプリケーションの実行
 uv run python app.py
-```
-
-#### 従来の方法（pip）
-
-```bash
-# 依存関係のインストール
-pip install -r requirements.txt
-
-# テストの実行
-pytest -v test_app.py
-
-# アプリケーションの実行
-python app.py
 ```
 
 ## セットアップ
 
 ### ローカルでの実行
 
-#### uvを使用する場合（推奨）
-
 ```bash
 # uvのインストール
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -104,19 +83,6 @@ uv run pytest -v test_app.py
 
 # アプリケーションの実行
 uv run python app.py
-```
-
-#### 従来の方法（pip）
-
-```bash
-# 依存関係のインストール
-pip install -r requirements.txt
-
-# テストの実行
-pytest -v test_app.py
-
-# アプリケーションの実行
-python app.py
 ```
 
 ### Self-hosted Runnerの設定
